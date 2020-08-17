@@ -1,5 +1,11 @@
 # Neo4j + docker + docker-compose + node.js + webpack vanilla JS
 
+## I wish I could but no time left:
+- Fix versions 
+- Use vueJS
+- Make more testing
+- Use Typescript (and generate it from the backend side)
+
 ## how to start
 - run terminal
 - `$ git clone https://github.com/idowald/nerfs-challenge.git`
