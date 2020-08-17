@@ -6,6 +6,10 @@ import { convertToTree } from './nerfTreeComponent';
 (function init() {
   const htmlRootTree = document.getElementsByClassName('tree')[0];
   getNerfs().then((nerfs) => {
+    if (!nerfs.root) {
+      document.getElementById('message').innerText = 'the db is empty, run the `make migration`';
+      return;
+    }
     const spanElement = document.createElement('span');
     spanElement.innerText = nerfs.root.name;
     spanElement.addEventListener('click', setDescription(nerfs.root));
