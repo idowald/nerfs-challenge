@@ -6,8 +6,9 @@ import { convertToTree } from './nerfTreeComponent';
 (function init() {
   const htmlRootTree = document.getElementsByClassName('tree')[0];
   getNerfs().then((nerfs) => {
-    if (!nerfs.root) {
-      document.getElementById('message').innerText = 'the db is empty, run the `make migration`';
+    // eslint-disable-next-line no-prototype-builtins
+    if (!nerfs.root || !nerfs.root.hasOwnProperty('name')) {
+      document.getElementById('message').innerText = 'The db is empty, run `make migration`';
       return;
     }
     const spanElement = document.createElement('span');
