@@ -2,7 +2,12 @@
 
 ## how to start
 - run terminal
+- `$ git clone https://github.com/idowald/nerfs-challenge.git`
+- `$ cd nerfs-challenge`
 - `$ make`
+- open a new terminal (the old one must continue to run)
+- run `$ make migration`
+- open http://localhost:13000 (depends on the OS)
 
 ### dependencies:
 - `make`
